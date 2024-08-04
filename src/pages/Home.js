@@ -5,6 +5,7 @@ import Body from "../components/body/body";
 import Card from "../components/Card/Card";
 import Sig from "../components/Signature/Sig";
 
+
 export default function Home() {
 
   return React.createElement(
@@ -14,6 +15,7 @@ export default function Home() {
     <Main />,
     <Body />,
     <Sig />
+    
   );
 // }
 

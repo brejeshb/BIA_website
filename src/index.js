@@ -24,6 +24,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import GetInvolved from "./pages/GetInvolved";
 import WhatWeDo from "./pages/WhatWeDo";
+import SideBar from "./components/SideBar/SideBar"
 
 export default function App() {
   return (
@@ -34,8 +35,10 @@ export default function App() {
           <Route path="whatwedo" element={<WhatWeDo />} />
           <Route path="getinvolved" element={<GetInvolved />} />
         </Routes>
+        <SideBar />
       </main>
     </BrowserRouter>
+    
   );
 }
 

@@ -1,0 +1,10 @@
+.sidebar {
+    width: 200px;
+    background: #f0f0f0;
+    height: 100vh;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    right:0;
+        overflow: auto;
+  }

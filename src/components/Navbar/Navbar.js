@@ -2,7 +2,7 @@ import logo from "../../assets/BIA_Logo.png";
 import { React, useState } from "react";
 import "../Navbar/Navbar.css";
 import { HashLink as Link } from 'react-router-hash-link';
-import prospectus from "../../assets/SMUBIA_Prospectus.pdf"
+import prospectus from "../../assets/SMUBIA_Prospectus_2024-25.pdf"
 
 import {
   AiOutlineMenu,
