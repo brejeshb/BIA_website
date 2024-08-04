@@ -6,6 +6,7 @@ import member from "../../assets/Home_members.jpg";
 import workshop from "../../assets/Home_workshops.jpg";
 import project from "../../assets/Home_projects.jpg";
 import partner from "../../assets/Get_involved_main.jpg";
+import { HashLink as Link } from 'react-router-hash-link';
 
 function Body() {
   return (
@@ -23,15 +24,15 @@ function Body() {
 <span className="bold-text"> 1,500 student members</span>
           </p>
         </div>
-        <div className="custom-container" id="card">
+        <div className="custom-container" id="card"> <Link to='whatwedo#top'>
           <h4 className="card-text">Workshops</h4>
           <br></br>
           <img src={workshop} alt="" className="images" />
           <p className="para">
           Conducted
-<span className="bold-text"> 16 curriculum workshops</span>,
-averaging 60 participants per workshop! Find out more about our curriculum workshops
-          </p>
+        <span className="bold-text"> 16 curriculum workshops</span>,
+        averaging 60 participants per workshop! Find out more about our curriculum workshops
+          </p></Link>
         </div>
         <div className="custom-container" id="card">
           <h4 className="card-text">Projects</h4>

@@ -6,7 +6,21 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import EmailIcon from '@mui/icons-material/Email';
 import { useNavigate  } from 'react-router-dom';
-import ShareOutlinedIcon from '@mui/icons-material/ShareOutlined';
+import Mascot from '../../assets/BIA_MASCOT.svg';
+import { Icon } from "@material-ui/core";
+
+
+export const Logo = () => (
+  <Icon>
+      <img src={Mascot} alt="Mascot" 
+      style={{
+        height: '100%',
+        width: '100%',
+        objectFit: 'contain',
+        display: 'block',
+        margin: 'auto'}} />
+  </Icon>
+)
 
 const actions = [
   { icon: <LinkedInIcon />, name: 'LinkedIn',  link:'https://www.linkedin.com/company/smubia/' },
@@ -23,11 +37,12 @@ export default function SideBar() {
         history.push(link);
       }}
   return (
-    <Box sx={{ height: 320, transform: 'translateZ(0px)', flexGrow: 1, position:'fixed', width:'9%', right:'5%',bottom:'2%'}}>
+    <Box sx={{ height: 320, transform: 'translateZ(0px)', flexGrow: 1, position:'fixed', right:'5%',bottom:'2%'}}>
         <SpeedDial 
         ariaLabel="SpeedDial basic example"
-        sx={{ position: 'absolute', bottom: 16, right: 16 }}
-        icon={<ShareOutlinedIcon />}      >
+        sx={{ position: 'absolute', bottom: 10, right: 10 }}
+        icon={<Logo 
+        />}      >
         {actions.map((action) => (
           <SpeedDialAction
             key={action.name}
