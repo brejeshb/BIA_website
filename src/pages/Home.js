@@ -4,7 +4,7 @@ import Main from "../components/Main/Main";
 import Body from "../components/body/body";
 import Card from "../components/Card/Card";
 import Sig from "../components/Signature/Sig";
-import Countdown from "../components/Countdown/Countdown";
+import Countdown from "../Countdown/Countdown";
 
 
 export default function Home() {

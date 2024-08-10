@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Countdown.css";
-import { next_bia_event } from "../Events/bia_events";
+import { next_bia_event } from "../components/Events/bia_events";
 
 const targetDate = next_bia_event ? next_bia_event.date : new Date("2024-08-06T23:59:59");
 
