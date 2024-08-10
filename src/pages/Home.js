@@ -4,6 +4,7 @@ import Main from "../components/Main/Main";
 import Body from "../components/body/body";
 import Card from "../components/Card/Card";
 import Sig from "../components/Signature/Sig";
+import Countdown from "../components/Countdown/Countdown";
 
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
     {id:'top'},
     <NavBar />,
     <Main />,
+    <Countdown/>,
     <Body />,
     <Sig />
     
