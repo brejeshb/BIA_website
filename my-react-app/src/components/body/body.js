@@ -47,7 +47,7 @@ function Body() {
           <br></br>
           <img src={partner} alt="" className="images" />
           <p className="para">
-          Partnered with <span className="bold-text"> 16 companies </span> to enhance our events and workshops! Reach out to us <a href="/DAP" className="bold-text"> here</a> for a partnership!
+          Partnered with <span className="bold-text"> 16 companies </span> to enhance our events and workshops! Reach out to us <a href="mailto: bia@sa.smu.edu.sg" className="bold-text"> here</a> for a partnership!
           </p>
         </div>
       </div>
