@@ -5,12 +5,20 @@
     margin: auto;
     color: #fff;
     font-family: 'Red Hat Text', sans-serif;
+
 }
 
 .countdown-container h3 {
     font-size: 2rem;
     margin-bottom: 1rem;
-    color: #3cbeb4;
+    color: black;
+    /* color:#3cbeb4; */
+}
+.countdown-container p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: black;
+    /* color: #fff; */
 }
 
 .countdown {
