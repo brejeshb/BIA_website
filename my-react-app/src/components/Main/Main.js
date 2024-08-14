@@ -21,13 +21,13 @@
 // }
 
 // export default Main_image;
-
 import React, { useState, useEffect } from "react";
 import "../Main/Main.css";
 
 function MainImage() {
   const [images, setImages] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [fade, setFade] = useState(true);
 
   // Load images from assets folder
   useEffect(() => {
@@ -36,28 +36,41 @@ function MainImage() {
     setImages(images);
   }, []);
 
-  // Rotate images
+  // Rotate images with fade effect
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+      setFade(false);
+      setTimeout(() => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+        setFade(true);
+      }, 500); // Match this to the fade-out time
     }, 3000);
     return () => clearInterval(interval);
   }, [images]);
 
   return (
-
-    <div className="container-fluid">
-      <img src={images[currentIndex]} className="image" alt="SMUBIA Logo" />
-      <div className="bottom-left">
-        <p id ="weare">We are</p>
+    <div className="main-container-fluid">
+      <div className="image-wrapper">
+        {images.map((image, index) => (
+          <img
+            key={index}
+            src={image}
+            className={`main-image ${index === currentIndex ? "fade-in" : "fade-out"}`}
+            alt="SMUBIA Logo"
+            style={{ opacity: index === currentIndex ? 1 : 0 }}
+          />
+        ))}
+      </div>
+      <div className="main-bottom-left">
+        <p id="weare">We are</p>
         <p id="smubia">SMUBIA</p>
       </div>
 
       <div className="main-box">
-        <p id ="vision">Our vision:</p>
+        <p id="vision">Our vision:</p>
         <p id="SMU">To build a sustainable ecosystem for analytics in SMU</p>
       </div>
-    </div >
+    </div>
   );
 }
 
