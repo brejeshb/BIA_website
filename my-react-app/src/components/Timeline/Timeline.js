@@ -7,15 +7,14 @@ function Timeline() {
 
     useEffect(() => {
         const handleScroll = () => {
-            checkpointsRef.current.forEach((bia_event) => {
-                if (isInView(bia_event)) {
-                    bia_event.classList.add("checkpoint--visible");
+            checkpointsRef.current.forEach((checkpoint) => {
+                if (isInView(checkpoint)) {
+                    checkpoint.classList.add("checkpoint--visible");
                 } else {
-                    bia_event.classList.remove("checkpoint--visible");
+                    checkpoint.classList.remove("checkpoint--visible");
                 }
             });
         };
-
         document.addEventListener("scroll", handleScroll);
 
         return () => {
@@ -34,18 +33,20 @@ function Timeline() {
     const renderEventsForMonth = (month, events) => (
         <div className="checkpoint" ref={el => checkpointsRef.current.push(el)} key={month}>
             <div>
-                {/* className="glow" */}
                 <h2>{month}</h2>
                 {events.map((event, index) => (
                     <div key={index} className="event-item">
                         <h3>{event.name}</h3>
+
                         <p>{event.description}</p>
-                        <button
-                            className="button"
-                            onClick={() => window.open(event.url, '_blank')}
-                        >
-                            Sign Up
-                        </button>
+                        {event.url && (
+                            <button
+                                className="button"
+                                onClick={() => window.open(event.url, '_blank')}
+                            >
+                                Sign Up
+                            </button>
+                        )}
                     </div>
                 ))}
             </div>
@@ -56,12 +57,9 @@ function Timeline() {
         <div className="timeline-container">
             <div className="title">
                 <h1>BIA TIMELINE</h1>
-                <p>This is the BIA timeline</p>
+                <p></p>
                 <div className="timeline">
-                    {/* <div className="borderless">                     */}
-                        {Object.keys(bia_events).map(month => renderEventsForMonth(month, bia_events[month]))}
-                        {/* </div> */}
-
+                    {Object.keys(bia_events).map(month => renderEventsForMonth(month, bia_events[month]))}
                 </div>
             </div>
         </div>
