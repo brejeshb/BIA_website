@@ -34,7 +34,9 @@ function Countdown() {
 
     return (
         <div className="countdown-container">
+            < br/>
             <h3>Sign ups close in</h3>
+            < br/>
             <div className="countdown">
                 <CountdownItem value={timeLeft.days} label="days" />
                 <CountdownItem value={timeLeft.hours} label="hours" />
@@ -43,6 +45,7 @@ function Countdown() {
             </div>
             {next_bia_event && (
                 <div className="next-event">
+                    <br />
                     <h3>Next Event: {next_bia_event.name}</h3>
                     <p>{next_bia_event.description}</p>
                     <a href={next_bia_event.url} className="button">Sign Up</a>
