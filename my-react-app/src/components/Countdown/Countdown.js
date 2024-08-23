@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import "./Countdown.css";
 import { next_bia_event } from "../Events/bia_events";
 
-const targetDate = next_bia_event ? next_bia_event.date : new Date("2024-08-06T23:59:59");
+// const targetDate = next_bia_event ? next_bia_event.date : new Date("2024-08-06T23:59:59");
+const targetDate = new Date("2024-08-31T23:59:00");
 
 function Countdown() {
     const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
@@ -35,7 +36,7 @@ function Countdown() {
     return (
         <div className="countdown-container">
             < br/>
-            <h3>Sign ups close in</h3>
+            <h3>Membership Sign ups close in</h3>
             < br/>
             <div className="countdown">
                 <CountdownItem value={timeLeft.days} label="days" />
@@ -46,9 +47,10 @@ function Countdown() {
             {next_bia_event && (
                 <div className="next-event">
                     <br />
-                    <h3>Next Event: {next_bia_event.name}</h3>
-                    <p>{next_bia_event.description}</p>
-                    <a href={next_bia_event.url} className="button">Sign Up</a>
+                    {/* <h3>Next Event: {next_bia_event.name}</h3> */}
+                    {/* <p>{next_bia_event.description}</p> */}
+                    {/* <a href={next_bia_event.url} className="button">Sign Up</a> */}
+                    <a href = 'https://docs.google.com/forms/d/e/1FAIpQLSf4-MaNVTYQETw0pIOAEQ3AOEUSkpKz8VfNUL7U3JEBbmwIFw/viewform' className="button">Sign Up</a>
                 </div>
             )}
         </div>
