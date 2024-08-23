@@ -17,8 +17,12 @@ const bia_events = {
     { name: "Data Analytics with Excel Workshop", 
       description: "Learn how to use PowerQuery in the Data Analytics Cycle to process and gain meaningful insights from data", 
       url: "https://forms.gle/R23L1KvNKEESsoiEA", 
-      date: new Date("2024-08-26T23:59:00") },
-
+      date: new Date("2024-08-20T23:59:00") },
+          
+      // { name: "", 
+      //   description: "", 
+      //   url: "", 
+      //   date: new Date("2024-08-31T23:59:00") },
 
     { name: "BIA Picnic", 
       description: "Welcoming event for new members to get to know one another", 
@@ -26,16 +30,17 @@ const bia_events = {
       date: new Date("2024-09-10T10:00:00") },
 
 
-    { name: "Data Visualisation with Python", 
-      description: "Gain valuable insights into how to effectively represent and display data using python visualisation libraries", 
-      url: "", 
-      date: new Date("2024-09-15T10:00:00") },
 
 
-    { name: "Pre DAP Workshop", 
-      description: "Receive guidance on how to brainstorming your DAP project and get a glimpse of what an end-to-end data analytics project entails", 
+    { name: "Intro to ML/Regresssion", 
+      description: "Learn the intuition behind how artificial intelligence makes predictions using mathematics and data. \n This workshop is NOT technical and will NOT make you an 'AI EXPERT'. \n However, this workshop is meant to give a taste of BIA's Data Associate Programme where you will dive MUCH deeper into the technical aspects of Machine Learning", 
       url: "", 
-      date: new Date("2024-09-20T10:00:00") },
+      date: new Date("2024-10-10T10:00:00") },
+
+    // { name: "Pre DAP Workshop", 
+    //   description: "Receive guidance on how to brainstorming your DAP project and get a glimpse of what an end-to-end data analytics project entails", 
+    //   url: "", 
+    //   date: new Date("2024-09-20T10:00:00") },
 
     { name: "Alumni Networking Night", 
       description: "An opportunity to network with and gain career insights from BIA Alumni", 
@@ -47,10 +52,11 @@ const bia_events = {
 
 
   October: [
-    { name: "Intro to ML/Regresssion", 
-      description: "Deep dive into Data Analytics and Machine Learning with the concepts of regression", 
-      url: "", 
-      date: new Date("2024-10-10T10:00:00") }
+
+      { name: "Data Visualisation with Python", 
+        description: "Gain valuable insights into how to effectively represent and display data using python visualisation libraries", 
+        url: "", 
+        date: new Date("2024-10-11T10:00:00") }
 
   ],
   November: [
